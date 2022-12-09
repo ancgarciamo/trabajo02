@@ -29,5 +29,21 @@ Dividimos el dataset en entrenamiento y validacion , con una relacion de 80 y 20
 Imagen 04
 
 ## Manejo de datos
-Ahora manejamos variables con informacion que en la manera que esta , no se puede digitar en un modelo, primero transformamos la variables emp_length ( el cual es años trabajando) , eliminamos toda cadena de texto , y en caso de ser especificamente trabajando menos de un año , eliminamos
+Ahora manejamos variables con informacion que en la manera que esta , no se puede digitar en un modelo, primero transformamos la variables emp_length ( el cual es años trabajando) , eliminamos toda cadena de texto , y en caso de ser especificamente trabajando menos de un año se vuelve 0 , ya despues de eso tenemos unicamente, datos numericos , en formato cadena , asi que transformamos en formato numerico los numeros.
+
+Asi para otras variables que necesiten algun manejo de datos se aplicara una funcion que las modifique.
+
 Imagen 05
+
+## Seleccion de variables
+Usando el metodo de chi cuadrado encontramos posibles variables para el modelo
+
+Imagen 06
+
+Usando el analisis de varianza usando el estadistico F, encontramos las siguientes variables para el modelo.
+
+Imagen 07
+
+## Matriz de coorelacion
+
+Usando las 20 primeras variables, grraficamos la matriz de coorrelacion para poder obtener
