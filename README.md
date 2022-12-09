@@ -24,3 +24,10 @@ Las variables que deciden si una persona no es buena opcion para un prestamo son
 Imagen 03
 
 ## Dividir el dataset
+Dividimos el dataset en entrenamiento y validacion , con una relacion de 80 y 20 rspectivamente del dataset original.
+
+Imagen 04
+
+## Manejo de datos
+Ahora manejamos variables con informacion que en la manera que esta , no se puede digitar en un modelo, primero transformamos la variables emp_length ( el cual es años trabajando) , eliminamos toda cadena de texto , y en caso de ser especificamente trabajando menos de un año , eliminamos
+Imagen 05
