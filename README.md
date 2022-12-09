@@ -63,12 +63,12 @@ En la siguiente imagen mostramos un ejemplo usando la variable revol_util
 
 Imagen 09
 
-## Modelo
-Una vez obtenido el modelo , usando regresion logistica y usando validacion cruzada obtenemos un modelo de prediccion de si una persona es buen o no cliente
+## Modelo inicial
+Una vez obtenido el modelo  , usando regresion logistica y usando validacion cruzada obtenemos un modelo de prediccion de si una persona es buen o no cliente
 con esto vemos que tanto el puntaje GINI como AUROC , son bastante buenos por lo tanto se acepta el modelo.
 
 Imagen 10
 
-## Scorecard
+## Modelo del Scorecard
 
-Por ultimo creamos un Scorecard, para esto usaremos los rangos sugeridos para los puntajes siendo de 300 a 850, con esto creamos coeficientes , con los cuales obtendremos una calificacion para cada variable, y luego las aplicamos sobre todo el dataset, usando anteriormente , el WOE , calculamos los puntajes para un set de datos dados y con eso se construye el modelo para la scorecard , al aplicarlo sobre el dataset original nos encontramos que la media de la poblacion ronda
+Por ultimo creamos un Scorecard, para esto usaremos los rangos sugeridos para los puntajes siendo de 300 a 850, con esto creamos coeficientes a partir de la suma de minimos y maximos de los valores obtenidos en cada variable , con los cuales obtendremos una calificacion para cada variable, y luego las aplicamos sobre todo el dataset, usando anteriormente , el WOE , calculamos los puntajes para un set de datos dados y con eso se construye el modelo para la scorecard , al aplicarlo sobre el dataset original nos encontramos que la media de la poblacion ronda el puntaje de 549.198462 , ya como se obtuvo el modelo para prediccion , este se usara para predecir en base a las variables obtenidas , el score de una persona.
