@@ -44,6 +44,31 @@ Usando el analisis de varianza usando el estadistico F, encontramos las siguient
 
 Imagen 07
 
-## Matriz de coorelacion
+## Mapa de coorelacion
 
-Usando las 20 primeras variables, grraficamos la matriz de coorrelacion para poder obtener
+Usando las 20 primeras variables, grraficamos el mapa de coorrelacion para poder obtener como se relacionan entre si.
+
+Imagen 08
+
+siendo que out_prncp_inv y total_pymnt_inv tienen una alta coorelacion se eliminan.
+
+## WOE
+Luego de haber seleccionado las variables , y haberles aplicado metodo de one hot encoding para que sean aptas para el modelo, se comienza la parte de la ingenieria de caracteristicas
+
+Para esto calculamos el WOE( peso de evidencia ) y el IV(Valor de informacion) estas tecnicas para ingenieria de caracteristicas son ampliamente usadas en puntajes crediticios.
+
+el WOE usa la formula de logaritmo natural de la division entre el porcentaje de buenos clientes sobre malos clientes mientras que el IV es una sumatoria de el producto del WOE por la diferencia de porcentaje entre buenos y malos clientes, estas tecnicas las aplicamos a todas nuestras variables predictorias
+
+En la siguiente imagen mostramos un ejemplo usando la variable revol_util
+
+Imagen 09
+
+## Modelo
+Una vez obtenido el modelo , usando regresion logistica y usando validacion cruzada obtenemos un modelo de prediccion de si una persona es buen o no cliente
+con esto vemos que tanto el puntaje GINI como AUROC , son bastante buenos por lo tanto se acepta el modelo.
+
+Imagen 10
+
+## Scorecard
+
+Por ultimo creamos un Scorecard, para esto usaremos los rangos sugeridos para los puntajes siendo de 300 a 850, con esto creamos coeficientes , con los cuales obtendremos una calificacion para cada variable, y luego las aplicamos sobre todo el dataset, usando anteriormente , el WOE , calculamos los puntajes para un set de datos dados y con eso se construye el modelo para la scorecard , al aplicarlo sobre el dataset original nos encontramos que la media de la poblacion ronda
